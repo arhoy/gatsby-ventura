@@ -1,0 +1,41 @@
+/* Order of CSS presedence (lower number is lower presedence)
+1. Bootstrap
+2. Global Style elements i.e h1 tags, body tags, p tags
+3. Global Style classNames
+4. Module style classNames (if named the same as global)
+*/
+/* GLOBAL STYLES */
+
+@import './variables';
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: $primaryColor;
+}
+h1 {
+  font-size: 10rem;
+  font-weight: bold;
+}
+
+.title {
+  text-transform: uppercase;
+  color: red;
+  font-size: 2rem;
+}
+.row-black {
+  background: rgb(114, 110, 110);
+}
+
+.white-background {
+  background: white;
+}
+.component {
+  padding: 1rem;
+  margin: 1.5rem;
+}
+.component-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
