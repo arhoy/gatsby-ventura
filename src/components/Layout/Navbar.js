@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
 const Navbar = () => {
   return (
@@ -13,8 +13,14 @@ const Navbar = () => {
       <li>
         <Link to="/blog">Blog</Link>
       </li>
+      <li>
+        <Link to="/examples">Examples</Link>
+      </li>
+      <li>
+        <Link to="/images">Images Page</Link>
+      </li>
     </ul>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
