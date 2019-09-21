@@ -19,6 +19,9 @@ const Navbar = () => {
       <li>
         <Link to="/images">Images Page</Link>
       </li>
+      <li>
+        <Link to="/tours">Tours Page</Link>
+      </li>
     </ul>
   );
 };
