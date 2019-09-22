@@ -7,35 +7,4 @@
 /* GLOBAL STYLES */
 
 @import './variables';
-
-body {
-  font-family: 'Lato', sans-serif;
-  background: $lightgrey;
-}
-h1 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.title {
-  text-transform: uppercase;
-  color: red;
-  font-size: 2rem;
-}
-.row-black {
-  background: rgb(114, 110, 110);
-}
-
-.white-background {
-  background: white;
-}
-.component {
-  padding: 1rem;
-  margin: 1.5rem;
-}
-.component-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@import './layout';
