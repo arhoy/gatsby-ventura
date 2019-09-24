@@ -1,3 +1,4 @@
+@import 'variables';
 .contact {
   padding: 4rem 0;
 }
@@ -22,19 +23,19 @@ label {
   font-size: 1rem;
   margin-bottom: 1rem;
   padding: 0.375rem 0.75rem;
-  border: 1px solid var(--darkGrey);
+  border: 1px solid ($darkGrey);
   border-radius: 0.25rem;
 }
 .submit {
-  background-color: var(--primaryColor);
-  border-color: var(--primaryColor);
+  background-color: ($primaryColor);
+  border-color: ($primaryColor);
   text-transform: uppercase;
-  color: var(--mainBlack);
-  transition: var(--mainTransition);
+  color: ($mainBlack);
+  transition: ($mainTransition);
   cursor: pointer;
 }
 .submit:hover {
-  background: var(--darkGrey);
-  color: var(--mainWhite);
-  border-color: var(--darkGrey);
+  background: ($darkGrey);
+  color: ($mainWhite);
+  border-color: ($darkGrey);
 }

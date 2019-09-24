@@ -1,18 +1,19 @@
+@import 'variables';
 .tour {
-  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s linear;
+  box-shadow: ($lightShadow);
+  transition: ($mainTransition);
 }
 .tour:hover {
-  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: ($darkShadow);
 }
 
 .img-container {
   position: relative;
-  background: #3fd0d4;
-  transition: all 0.3s linear;
+  background: ($primaryColor);
+  transition: ($mainTransition);
 }
 .img {
-  transition: all 0.3s linear;
+  transition: ($mainTransition);
 }
 .img-container:hover .img {
   opacity: 0.3;
@@ -25,18 +26,17 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  color: #fff;
-  border: 2px solid #fff;
+  letter-spacing: ($mainSpacing);
+  color: ($mainWhite);
+  border: 2px solid ($mainWhite);
   padding: 0.5rem 0.7rem;
   display: inline-block;
-  transition: all 0.3s linear;
+  transition: ($mainTransition);
   cursor: pointer;
-  text-decoration: none;
 }
 .link:hover {
-  background: #fff;
-  color: #3fd0d4;
+  background: ($mainWhite);
+  color: ($primaryColor);
 }
 .img-container:hover .link {
   opacity: 1;
@@ -64,7 +64,7 @@
 }
 .country {
   text-transform: capitalize;
-  color: #3fd0d4;
+  color: ($primaryColor);
   display: flex;
   align-items: center;
 }
@@ -72,9 +72,7 @@
   margin-right: 0.4rem;
 }
 .details {
-  color: #cfcfcf;
+  color: ($darkGrey);
   text-transform: uppercase;
   text-align: right;
-  font-size: 16px;
-  letter-spacing: 2px;
 }
