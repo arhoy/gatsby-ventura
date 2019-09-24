@@ -1,3 +1,4 @@
+@import './variables';
 .about {
   padding: 4rem 0;
 }
@@ -18,10 +19,10 @@
 .about-img img {
   width: 100%;
   display: block;
-  box-shadow: var(--lightShadow);
+  box-shadow: $lightShadow;
 }
 .about-img div {
-  box-shadow: var(--lightShadow);
+  box-shadow: $lightShadow;
 }
 .about-info h4 {
   font-size: 1.9rem;
@@ -53,11 +54,11 @@
 }
 @media screen and (min-width: 992px) {
   .img-container::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    border: 3px solid var(--primaryColor);
+    border: 3px solid $primaryColor;
     box-sizing: border-box;
     top: -16px;
     left: -16px;

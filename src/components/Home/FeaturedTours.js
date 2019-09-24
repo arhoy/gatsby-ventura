@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleTour from '../Tours/SingleTour';
+import Tour from '../Tours/Tour';
 import { useStaticQuery, graphql } from 'gatsby';
 import styles from '../../scss/items.module.scss';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
@@ -37,7 +37,7 @@ const FeaturedTours = () => {
       <Title title="featured" subtitle="tours" />
       <div className={styles.center}>
         {tours.map(tour => (
-          <SingleTour key={tour.contentful_id} tour={tour} />
+          <Tour key={tour.contentful_id} tour={tour} />
         ))}
       </div>
       <AniLink fade to="/tours" className="btn-primary">

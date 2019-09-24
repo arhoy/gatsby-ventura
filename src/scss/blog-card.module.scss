@@ -1,18 +1,19 @@
+@import 'variables';
 .blog {
-  box-shadow: var(--lightShadow);
-  transition: var(--mainTransition);
+  box-shadow: $lightShadow;
+  transition: $mainTransition;
 }
 .blog:hover {
-  box-shadow: var(--darkShadow);
+  box-shadow: $darkShadow;
 }
 
 .img-container {
   position: relative;
-  background: var(--primaryColor);
-  transition: var(--mainTransition);
+  background: $primaryColor;
+  transition: $mainTransition;
 }
 .img {
-  transition: var(--mainTransition);
+  transition: $mainTransition;
 }
 .img-container:hover .img {
   opacity: 0.3;
@@ -25,17 +26,17 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainWhite);
-  border: 2px solid var(--mainWhite);
+  letter-spacing: $mainSpacing;
+  color: $mainWhite;
+  border: 2px solid $mainWhite;
   padding: 0.5rem 0.7rem;
   display: inline-block;
-  transition: var(--mainTransition);
+  transition: $mainTransition;
   cursor: pointer;
 }
 .link:hover {
-  background: var(--mainWhite);
-  color: var(--primaryColor);
+  background: $mainWhite;
+  color: $primaryColor;
 }
 .img-container:hover .link {
   opacity: 1;
@@ -53,7 +54,7 @@
   position: absolute;
   left: 0;
   top: 75%;
-  background: var(--primaryColor);
+  background: $primaryColor;
   padding: 0.3rem 0.5rem;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;

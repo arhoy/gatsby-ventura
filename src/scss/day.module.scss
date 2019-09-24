@@ -1,3 +1,4 @@
+@import 'variables';
 .day {
   margin: 2rem 0;
 }
@@ -14,11 +15,11 @@
 }
 .btn svg {
   font-size: 1.5rem;
-  color: var(--primaryColor);
+  color: $primaryColor;
 }
 .day p {
   line-height: 2;
-  transition: var(--mainTransition);
+  transition: $mainTransition;
 }
 @media screen and (min-width: 992px) {
   .day h4 {

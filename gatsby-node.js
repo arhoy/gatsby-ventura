@@ -6,7 +6,12 @@ exports.createPages = async ({ actions, graphql }) => {
       tours: allContentfulTourExample {
         nodes {
           slug
-          tourLength
+        }
+      }
+
+      posts: allContentfulPost {
+        nodes {
+          slug
         }
       }
     }
@@ -17,8 +22,18 @@ exports.createPages = async ({ actions, graphql }) => {
       path: `tours/${tour.slug}`,
       component: path.resolve('./src/templates/TourTemplate.js'),
       context: {
-          slug:tour.slug
-      }
+        slug: tour.slug,
+      },
+    });
+  });
+
+  data.posts.nodes.forEach(post => {
+    createPage({
+      path: `blog/${post.slug}`,
+      component: path.resolve('./src/templates/BlogTemplate.js'),
+      context: {
+        slug: post.slug,
+      },
     });
   });
 };

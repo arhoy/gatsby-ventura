@@ -1,78 +1,66 @@
 @import 'variables';
-.tour {
-  box-shadow: ($lightShadow);
-  transition: ($mainTransition);
+.template {
+  padding: 4rem 0;
 }
-.tour:hover {
-  box-shadow: ($darkShadow);
+.center {
+  width: 80vw;
+  margin: 0 auto;
 }
-
-.img-container {
-  position: relative;
-  background: ($primaryColor);
-  transition: ($mainTransition);
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  margin-bottom: 2rem;
 }
-.img {
-  transition: ($mainTransition);
+.image {
+  box-shadow: $lightShadow;
 }
-.img-container:hover .img {
-  opacity: 0.3;
-}
-
-.link {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  text-transform: uppercase;
-  letter-spacing: ($mainSpacing);
-  color: ($mainWhite);
-  border: 2px solid ($mainWhite);
-  padding: 0.5rem 0.7rem;
-  display: inline-block;
-  transition: ($mainTransition);
-  cursor: pointer;
-}
-.link:hover {
-  background: ($mainWhite);
-  color: ($primaryColor);
-}
-.img-container:hover .link {
-  opacity: 1;
-}
-
-.footer {
-  padding: 1rem;
-  text-align: left;
-}
-.footer h3 {
+.template h2 {
   text-transform: capitalize;
-  margin-bottom: 0;
+  letter-spacing: $mainSpacing;
+  margin-bottom: 1rem;
 }
 .info {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  text-transform: uppercase;
-  align-items: center;
-  margin-top: 0.5rem;
 }
-.info h6,
-.info h4 {
-  margin-bottom: 0;
-}
-.country {
-  text-transform: capitalize;
-  color: ($primaryColor);
+.info p {
   display: flex;
   align-items: center;
+  margin-right: 2rem;
+  text-transform: capitalize;
 }
 .icon {
-  margin-right: 0.4rem;
+  color: $primaryColor;
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
 }
-.details {
-  color: ($darkGrey);
-  text-transform: uppercase;
-  text-align: right;
+.desc {
+  line-height: 2;
+}
+.template h4 {
+  text-transform: capitalize;
+}
+.template h2 {
+  margin: 2rem 0;
+}
+.journey {
+  margin: 3rem 0;
+}
+@media screen and (min-width: 992px) {
+  .journey,
+  .desc {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .center {
+    width: 95vw;
+    max-width: 1170vw;
+  }
+  .images {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-column-gap: 50px;
+  }
 }

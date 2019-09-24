@@ -1,36 +1,36 @@
 @import './variables';
 .footer {
   margin-top: auto;
-  background: ($mainBlack);
+  background: $mainBlack;
   padding: 2rem;
   text-align: center;
-  color: ($mainWhite);
+  color: $mainWhite;
 }
 .links a {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: ($mainWhite);
+  color: $mainWhite;
   margin: 0.5rem 1rem;
-  letter-spacing: ($mainSpacing);
-  transition: ($mainTransition);
+  letter-spacing: $mainSpacing;
+  transition: $mainTransition;
   font-weight: bold;
 }
 .links a:hover {
-  color: ($primaryColor);
+  color: $primaryColor;
 }
 .icons a {
   display: inline-block;
   margin: 1rem;
   font-size: 1.3rem;
-  color: ($mainWhite);
-  transition: ($mainTransition);
+  color: $mainWhite;
+  transition: $mainTransition;
 }
 .icons a:hover {
-  color: ($primaryColor);
+  color: $primaryColor;
 }
 .copyright {
   text-transform: capitalize;
-  letter-spacing: ($mainSpacing);
+  letter-spacing: $mainSpacing;
   line-height: 2;
 }
