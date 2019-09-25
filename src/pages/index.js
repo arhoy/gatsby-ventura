@@ -7,6 +7,7 @@ import Services from '../components/Home/Services';
 import { graphql } from 'gatsby';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import FeaturedTours from '../components/Home/FeaturedTours';
+import SEO from '../components/SEO/SEO';
 
 // define page query to return optimized image
 export const query = graphql`
@@ -24,6 +25,10 @@ export const query = graphql`
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO
+        title="Explore Tours, Tours for Everyone"
+        description="Explore All our adventure Tours. Tours for Adventure seekers and tours for everyone. Go find your tour today!"
+      />
       <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="Always Exploring"

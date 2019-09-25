@@ -10,13 +10,13 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'GATSBY tutorial',
-    description: 'just some description about the site ya',
+    title: 'BackRoads',
+    description:
+      'Backroads project based on John Smigla Gatsby course. Explore these awesome adventures around the world! Book today and start exploring the world',
     author: 'Alex Quasar',
-    data: {
-      name: 'Alex',
-      age: '100',
-    },
+    twitterUsername: '@_aquasar',
+    image: '/defaultBcg.jpeg',
+    siteUrl: 'https://gatsby-backround-demo-project-10110.netflify.com',
   },
   plugins: [
     {
@@ -39,6 +39,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-playground`,
-    `gatsby-plugin-transition-link`
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-react-helmet`,
   ],
 };
