@@ -17,6 +17,7 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
+  // standard tour template
   data.tours.nodes.forEach(tour => {
     createPage({
       path: `tours/${tour.slug}`,
@@ -26,13 +27,31 @@ exports.createPages = async ({ actions, graphql }) => {
       },
     });
   });
-
+  // standard blog template
   data.posts.nodes.forEach(post => {
     createPage({
       path: `blog/${post.slug}`,
       component: path.resolve('./src/templates/BlogTemplate.js'),
       context: {
         slug: post.slug,
+      },
+    });
+  });
+  // blog template w/ pagination
+  const posts = data.posts.nodes;
+  const postsPerPage = 1;
+  const numPages = Math.ceil(posts.length / postsPerPage);
+  console.log('gatsby node', posts);
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blogs` : `/blogs/${i + 1}`,
+      component: path.resolve('./src/templates/BlogListTemplate.js'),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
       },
     });
   });

@@ -4,12 +4,12 @@ import styles from '../../scss/blog-card.module.scss';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const BlogCard = ({ blog }) => {
-  const { slug, title, image, published } = blog;
+  const { slug, title, images, published } = blog;
 
   return (
     <article className={styles.blog}>
       <div className={styles.imgContainer}>
-        <Image fluid={image.fluid} className={styles.img} />
+        <Image fluid={images.fluid} className={styles.img} />
         <AniLink fade className={styles.link} to={`/blog/${slug}`}>
           read more
         </AniLink>
