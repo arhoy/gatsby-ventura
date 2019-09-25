@@ -36,7 +36,6 @@ const BlogTemplate = ({ data: { post } }) => {
         );
       },
       'embedded-entry-block': node => {
-        console.log(node);
         const { name, images, description } = node.data.target.fields;
         return (
           <div>

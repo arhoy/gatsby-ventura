@@ -41,7 +41,6 @@ exports.createPages = async ({ actions, graphql }) => {
   const posts = data.posts.nodes;
   const postsPerPage = 1;
   const numPages = Math.ceil(posts.length / postsPerPage);
-  console.log('gatsby node', posts);
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

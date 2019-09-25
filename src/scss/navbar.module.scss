@@ -21,7 +21,7 @@
 
 .nav-links {
   list-style-type: none;
-  transition: ($mainTransition);
+  transition: $mainTransition;
   height: 0;
   overflow: hidden;
 }
@@ -33,13 +33,13 @@
   padding: 1rem 1.25rem;
   text-decoration: none;
   text-transform: capitalize;
-  color: ($mainBlack);
-  transition: ($mainTransition);
+  color: $mainBlack;
+  transition: $mainTransition;
   font-weight: bold;
-  letter-spacing: ($mainSpacing);
+  letter-spacing: $mainSpacing;
 }
 .nav-links a:hover {
-  color: ($primaryColor);
+  color: $primaryColor;
 }
 .nav-social-links {
   display: none;
@@ -47,6 +47,9 @@
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 2rem;
+  }
+  .nav-links {
+    margin-bottom: -0.2rem;
   }
 }
 
@@ -64,19 +67,20 @@
   .nav-links {
     height: auto;
     display: flex;
+    margin-bottom: -0.2rem;
   }
   .nav-social-links {
     display: flex;
     line-height: 0;
   }
   .nav-social-links a {
-    color: ($primaryColor);
+    color: $primaryColor;
     margin: 0 0.5rem;
     font-size: 1.2rem;
-    transition: ($mainTransition);
+    transition: $mainTransition;
   }
   .nav-social-links a:hover {
-    color: ($mainBlack);
+    color: $mainBlack;
     transform: translateY(-5px);
   }
 }

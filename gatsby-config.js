@@ -16,7 +16,7 @@ module.exports = {
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     image: '/defaultBcg.jpeg',
-    siteUrl: 'https://gatsby-backround-demo-project-10110.netflify.com',
+    siteUrl: 'https://backroads-gatsby-site-100.netflify.com',
   },
   plugins: [
     {

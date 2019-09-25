@@ -5,7 +5,7 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const BlogCard = ({ blog }) => {
   const { slug, title, images, published } = blog;
-  console.log('image from BC', images);
+
   return (
     <article className={styles.blog}>
       <div className={styles.imgContainer}>
