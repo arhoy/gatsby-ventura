@@ -27,11 +27,12 @@ const SEO = ({ title, description }) => {
     image,
     twitterUsername,
   } = site.siteMetadata;
-
+  console.log(`${siteUrl}${image}`);
   return (
     <Helmet title={`${title} | ${siteTitle}`} htmlAttributes={{ lang: 'en' }}>
       <meta name="description" content={description || siteDescription} />
       <meta name="image" content={image} />
+      <meta name="author" content={author} />
       {/* twitter card */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={twitterUsername} />

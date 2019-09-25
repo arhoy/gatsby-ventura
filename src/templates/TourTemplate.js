@@ -8,6 +8,7 @@ import { Link } from 'gatsby';
 import StyledHero from '../components/StyledHero';
 import Banner from '../components/Banner';
 import Day from '../components/SingleTour/Day';
+import SEO from '../components/SEO/SEO';
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,8 +34,7 @@ export const query = graphql`
   }
 `;
 
-const TourTemplate = ({ pageContext, data }) => {
-  const { slug } = pageContext;
+const TourTemplate = ({ data }) => {
   const {
     name,
     images,
@@ -50,6 +50,7 @@ const TourTemplate = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <SEO title={name} />
       <StyledHero img={mainImage.fluid}>
         <Banner
           title="Chicago River Tour"

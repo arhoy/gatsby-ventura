@@ -28,10 +28,11 @@ const BlogTemplate = ({ data: { post } }) => {
   const options = {
     renderNode: {
       'embedded-asset-block': node => {
+        const { file, title } = node.data.target.fields;
         return (
           <div>
-            <h3>This is awesome image</h3>
-            <img width="400" src={node.data.target.fields.file['en-US'].url} />
+            <h3>Gallery</h3>
+            <img width="400" src={file['en-US'].url} alt={title} />
           </div>
         );
       },

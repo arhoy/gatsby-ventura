@@ -46,14 +46,13 @@ const BlogListTemplate = ({ data, pageContext }) => {
       </section>
       <section className={styles.links}>
         {!isFirst && (
-          <Link fade to={prevPage} className={styles.link}>
+          <Link to={prevPage} className={styles.link}>
             Prev
           </Link>
         )}
         {Array.from({ length: numPages }, (_, i) => (
           <Link
             key={`pagination-number${i + 1}`}
-            fade
             to={`/blogs/${i === 0 ? '' : i + 1}`}
             className={
               i + 1 === currentPage
@@ -65,7 +64,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
           </Link>
         ))}
         {!isLast && (
-          <Link fade to={nextPage} className={styles.link}>
+          <Link to={nextPage} className={styles.link}>
             Next
           </Link>
         )}
