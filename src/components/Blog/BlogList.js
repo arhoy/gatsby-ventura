@@ -15,7 +15,7 @@ const getPosts = graphql`
         slug
         published(formatString: "MMMM Do, YYYY")
         title
-        image: images {
+        images {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyContentfulFluid
           }
