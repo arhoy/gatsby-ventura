@@ -4,6 +4,7 @@ import styles from '../scss/single-blog.module.scss';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Layout from '../components/Layout/Layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import SEO from '../components/SEO/SEO';
 
 // run template query
 export const query = graphql`
@@ -58,6 +59,7 @@ const BlogTemplate = ({ data: { post } }) => {
 
   return (
     <Layout>
+      <SEO title={title} />
       <section className={styles.blog}>
         <div className={styles.center}>
           <h1>{title} </h1>

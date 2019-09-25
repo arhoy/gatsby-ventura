@@ -4,6 +4,7 @@ import Tours from '../components/Tours/Tours';
 import StyledHero from '../components/StyledHero';
 import Banner from '../components/Banner';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO/SEO';
 
 export const getTours = graphql`
   query {
@@ -34,6 +35,7 @@ export const getTours = graphql`
 const tours = ({ data }) => {
   return (
     <Layout>
+      <SEO title="Explore All Tours" />
       <StyledHero img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="Amazing Tours"

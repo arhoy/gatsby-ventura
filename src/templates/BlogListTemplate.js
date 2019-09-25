@@ -5,6 +5,7 @@ import BlogCard from '../components/Blog/BlogCard';
 import Title from '../components/StyledComponents/Title';
 import Layout from '../components/Layout/Layout';
 import { Link } from 'gatsby';
+import SEO from '../components/SEO/SEO';
 
 export const query = graphql`
   query getPosts($skip: Int, $limit: Int) {
@@ -36,6 +37,7 @@ const BlogListTemplate = ({ data, pageContext }) => {
   const nextPage = `/blogs/${currentPage + 1}`;
   return (
     <Layout>
+      <SEO title = "Blog List"/>
       <section className={styles.center}>
         <Title title="latest" subtitle="posts" />
         <div className={styles.center}>

@@ -3,6 +3,7 @@ import Layout from '../components/Layout/Layout';
 import StyledHero from '../components/StyledHero';
 import Banner from '../components/Banner';
 import { graphql } from 'gatsby';
+import SEO from '../components/SEO/SEO';
 
 // define page query to return optimized image
 export const query = graphql`
@@ -20,6 +21,7 @@ export const query = graphql`
 const About = ({data}) => {
   return (
     <Layout>
+      <SEO title = "About US"/>
         <StyledHero img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
           title="About Us"

@@ -3,10 +3,12 @@ import Layout from '../components/Layout/Layout';
 import styles from '../scss/error.module.scss';
 import { Link } from 'gatsby';
 import Banner from '../components/Banner';
+import SEO from '../components/SEO/SEO';
 
 const ErrorPage = () => {
   return (
     <Layout>
+      <SEO title="404 Not Found" />
       <header className={styles.error}>
         <Banner
           title="That is a dead end"
