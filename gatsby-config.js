@@ -7,6 +7,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const URL = "https://ventura-gatsby-site-101.netflify.com"
+
 module.exports = {
   /* Your site config here */
   siteMetadata: {
@@ -16,7 +18,7 @@ module.exports = {
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     image: '/defaultBcg.jpeg',
-    siteUrl: 'https://backroads-gatsby-site-100.netflify.com',
+    siteUrl: URL,
   },
   plugins: [
     {
@@ -41,27 +43,6 @@ module.exports = {
     `gatsby-plugin-playground`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: `${siteMetadata.siteUrl}`,
-        sitemap: `${siteMetadata.siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', allow: '/' }],
-      },
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `BackRoads Tour Company`,
-        short_name: `BackRoads`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
-        icon: 'src/images/icon.jpg',
-      },
-    },
+    `gatsby-plugin-sitemap`
   ],
 };
