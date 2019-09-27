@@ -92,6 +92,7 @@ const TourTemplate = ({ data }) => {
               return <Day key={index} day={item.day} info={item.info} />;
             })}
           </div>
+
           <Link to="/tours" className="btn-primary">
             back to tours
           </Link>

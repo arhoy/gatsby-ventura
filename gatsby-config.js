@@ -43,6 +43,13 @@ module.exports = {
     `gatsby-plugin-playground`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
+    {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+        apiKey: process.env.SNIPCART_API,
+        autopop:true
+			}
+		}
   ],
 };

@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "gatsby-ventura",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Ventura Tours",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -26,6 +26,7 @@
     "gatsby-plugin-sass": "^2.1.14",
     "gatsby-plugin-sharp": "^2.2.25",
     "gatsby-plugin-sitemap": "^2.2.14",
+    "gatsby-plugin-snipcart": "^1.1.2",
     "gatsby-plugin-styled-components": "^3.1.5",
     "gatsby-plugin-transition-link": "^1.13.0",
     "gatsby-source-contentful": "^2.1.39",
