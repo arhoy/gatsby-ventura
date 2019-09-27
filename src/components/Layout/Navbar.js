@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styles from '../../scss/navbar.module.scss';
-import { FaAlignRight } from 'react-icons/fa';
+import { FaAlignRight, FaOpencart } from 'react-icons/fa';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
 import logo from '../../images/logo.svg';
@@ -45,6 +45,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
+        <FaOpencart className={styles.logoIcon} style = {{cursor:'pointer'}} />
       </div>
     </nav>
   );

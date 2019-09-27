@@ -9,10 +9,12 @@ import StyledHero from '../components/StyledHero';
 import Banner from '../components/Banner';
 import Day from '../components/SingleTour/Day';
 import SEO from '../components/SEO/SEO';
+import AddTour from '../components/SingleTour/AddTour';
 
 export const query = graphql`
   query($slug: String!) {
     tour: contentfulTourExample(slug: { eq: $slug }) {
+      id: contentful_id
       name
       price
       country
@@ -27,6 +29,7 @@ export const query = graphql`
       }
       images {
         fluid {
+          src
           ...GatsbyContentfulFluid_withWebp
         }
       }
@@ -36,6 +39,7 @@ export const query = graphql`
 
 const TourTemplate = ({ data }) => {
   const {
+    id,
     name,
     images,
     description: { description },
@@ -44,6 +48,7 @@ const TourTemplate = ({ data }) => {
     country,
     tourLength,
     startDate,
+    src,
   } = data.tour;
 
   const [mainImage, ...tourImages] = images;
@@ -92,7 +97,14 @@ const TourTemplate = ({ data }) => {
               return <Day key={index} day={item.day} info={item.info} />;
             })}
           </div>
-
+          <AddTour
+            className="btn-primary"
+            name={name}
+            price={price}
+            id={id}
+            startDate={startDate}
+            src={src}
+          />
           <Link to="/tours" className="btn-primary">
             back to tours
           </Link>
