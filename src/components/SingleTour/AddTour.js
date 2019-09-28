@@ -1,6 +1,7 @@
 import React from 'react';
 
 const AddTour = ({ name, price, id, startDate, src }) => {
+  console.log('Source is', id, name, price, startDate);
   return (
     <button
       class="snipcart-add-item"

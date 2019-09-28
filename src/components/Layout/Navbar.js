@@ -45,7 +45,10 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <FaOpencart className={styles.logoIcon} style = {{cursor:'pointer'}} />
+        <FaOpencart
+          className="snipcart-checkout"
+          style={{ cursor: 'pointer', color: 'red', fontSize: '2rem' }}
+        />
       </div>
     </nav>
   );

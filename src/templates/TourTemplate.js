@@ -48,18 +48,18 @@ const TourTemplate = ({ data }) => {
     country,
     tourLength,
     startDate,
-    src,
   } = data.tour;
 
   const [mainImage, ...tourImages] = images;
+  const { src } = mainImage.fluid;
 
   return (
     <Layout>
       <SEO title={name} />
       <StyledHero img={mainImage.fluid}>
         <Banner
-          title="Chicago River Tour"
-          info="  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto minima consectetur culpa ullam optio laboriosam officiis "
+          title={name}
+          info={`Lorem ${name} ipsum dolor sit, amet consectetur adipisicing elit. Architecto minima consectetur culpa ullam optio laboriosam officiis!`}
         />
       </StyledHero>
       <section className={styles.template}>
