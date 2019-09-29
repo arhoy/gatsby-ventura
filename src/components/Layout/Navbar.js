@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img className={styles.logo} src={logo} alt="Ventura logo" />
+          <img className={styles.logo} src={logo} alt="Ventura Logo" />
           <button className={styles.logoBtn} onClick={() => setState(!state)}>
             <FaAlignRight className={styles.logoIcon} />
 
