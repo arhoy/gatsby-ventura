@@ -7,14 +7,14 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const URL = "https://ventura-gatsby-site-101.netflify.com"
+const URL = 'https://ventura-gatsby-site-101.netflify.com';
 
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'BackRoads',
+    title: 'Ventura',
     description:
-      'Backroads project based on John Smigla Gatsby course. Explore these awesome adventures around the world! Book today and start exploring the world',
+      'Ventura project based on John Smigla Gatsby course. Explore these awesome adventures around the world! Book today and start exploring the world',
     author: 'Alex Quasar',
     twitterUsername: '@_aquasar',
     image: '/defaultBcg.jpeg',
@@ -45,11 +45,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     {
-			resolve: 'gatsby-plugin-snipcart',
-			options: {
+      resolve: 'gatsby-plugin-snipcart',
+      options: {
         apiKey: process.env.SNIPCART_API,
-        autopop:true
-			}
-		}
+        autopop: true,
+      },
+    },
   ],
 };

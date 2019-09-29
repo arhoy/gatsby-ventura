@@ -1,0 +1,28 @@
+@import '../variables';
+.title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  margin: 0.3rem 0.3rem;
+  & h4 {
+    text-align: center;
+    color: $mainBlack;
+
+    font-size: 2.3rem;
+  }
+
+  & span {
+    display: block;
+  }
+
+  @media (min-width: 576px) {
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.primary {
+  color: $primaryColor;
+  margin-right: 0.5rem;
+}

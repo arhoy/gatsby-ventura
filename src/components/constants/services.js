@@ -1,23 +1,23 @@
-import React from "react"
-import { FaWallet, FaTree, FaSocks } from "react-icons/fa"
+import React from 'react';
+import { FaStar, FaTree, FaCheckDouble } from 'react-icons/fa';
 
 export default [
   {
-    icon: <FaWallet />,
-    title: "saving money",
+    icon: <FaStar />,
+    title: 'Expertise',
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ',
   },
   {
     icon: <FaTree />,
-    title: "endless hiking",
+    title: 'Experience',
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      'Occaecat enim in ex et quis reprehenderit deserunt exercitation ea magna ad consectetur id. Nulla in is ullamco labore dolor',
   },
   {
-    icon: <FaSocks />,
-    title: "amazing comfort",
+    icon: <FaCheckDouble />,
+    title: 'Safety',
     text:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, earum. ",
+      'Sint mollit fugiat cupidatat esse. consectetur adipisicing elit. Obcaecati, earum. ',
   },
-]
+];

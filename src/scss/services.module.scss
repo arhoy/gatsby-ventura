@@ -1,6 +1,6 @@
 @import './variables';
 .services {
-  background: ($mainGrey);
+  background: $mainGrey;
   padding: 4rem 0;
 }
 .center {
@@ -15,11 +15,15 @@
   text-align: center;
 }
 .service span {
-  background: ($primaryColor);
-  padding: 0.5rem;
+  background: $primaryColor;
+  padding: 1.6rem;
   display: inline-block;
   font-size: 2rem;
+  border-radius: 10%;
   margin-bottom: 1.5rem;
+  & svg {
+    color: $mainWhite;
+  }
 }
 .service h4 {
   text-transform: uppercase;

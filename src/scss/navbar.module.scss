@@ -10,6 +10,14 @@
   background: transparent;
   border: none;
   outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
 }
 .logo-btn:hover {
   cursor: pointer;
@@ -44,6 +52,11 @@
 .nav-social-links {
   display: none;
 }
+.cart-checkout {
+  color: $primaryColor;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
 
 @media screen and (min-width: 576px) {
   .navbar {
@@ -55,6 +68,15 @@
 }
 
 @media screen and (min-width: 992px) {
+  .cart-checkout {
+    color: $mainWhite;
+    background: $primaryColor;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    padding: 4px;
+  }
+
   .logo-btn {
     display: none;
   }
@@ -72,6 +94,8 @@
   }
   .nav-social-links {
     display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 0;
   }
   .nav-social-links a {

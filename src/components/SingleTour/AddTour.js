@@ -1,10 +1,10 @@
 import React from 'react';
+import styles from '../../scss/components/SingleTour/AddTour.module.scss';
 
 const AddTour = ({ name, price, id, startDate, src }) => {
-  console.log('Source is', id, name, price, startDate);
   return (
     <button
-      class="snipcart-add-item"
+      className={`snipcart-add-item ${styles.button}`}
       data-item-id={id}
       data-item-name={name}
       data-item-price={price}
@@ -12,7 +12,7 @@ const AddTour = ({ name, price, id, startDate, src }) => {
       data-item-image={src}
       data-item-url="https://ventura-gatsby-site-101.netflify.com/tours"
     >
-      Buy Tour
+      Add to Cart
     </button>
   );
 };

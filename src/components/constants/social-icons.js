@@ -1,17 +1,13 @@
 import React from 'react';
-import { FaFacebook, FaTwitterSquare, FaSquarespace } from 'react-icons/fa';
+import { FaFacebook, FaTwitterSquare, FaGithub } from 'react-icons/fa';
 
 export default [
   {
     icon: <FaFacebook />,
-    url: 'https://facebook.com',
+    url: 'https://www.facebook.com/CraveJs-1602659229869334',
   },
   {
-    icon: <FaTwitterSquare />,
-    url: 'https://twitter.com/',
-  },
-  {
-    icon: <FaSquarespace />,
-    url: 'https://www.squarespace.com',
+    icon: <FaGithub />,
+    url: 'https://github.com/arhoy',
   },
 ];

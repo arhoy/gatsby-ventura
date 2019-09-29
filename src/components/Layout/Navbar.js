@@ -4,7 +4,7 @@ import styles from '../../scss/navbar.module.scss';
 import { FaAlignRight, FaOpencart } from 'react-icons/fa';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
-import logo from '../../images/logo.svg';
+import logo from '../../images/logo.png';
 
 const Navbar = () => {
   const [state, setState] = useState(false);
@@ -12,9 +12,13 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img src={logo} alt="backroads logo" />
+          <img src={logo} alt="Ventura logo" />
           <button className={styles.logoBtn} onClick={() => setState(!state)}>
             <FaAlignRight className={styles.logoIcon} />
+
+            <FaOpencart
+              className={`snipcart-checkout ${styles.cartCheckout}`}
+            />
           </button>
         </div>
         <ul
@@ -34,6 +38,7 @@ const Navbar = () => {
           ))}
         </ul>
         <div className={styles.navSocialLinks}>
+          <FaOpencart className={`snipcart-checkout ${styles.cartCheckout}`} />
           {socialIcons.map(icon => (
             <a
               key={icon.url}
@@ -45,10 +50,6 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        <FaOpencart
-          className="snipcart-checkout"
-          style={{ cursor: 'pointer', color: 'red', fontSize: '2rem' }}
-        />
       </div>
     </nav>
   );
