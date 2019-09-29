@@ -1,5 +1,7 @@
 @import './variables';
-
+.logo {
+  max-width: 10rem;
+}
 .nav-header {
   display: flex;
   justify-content: space-between;

@@ -4,7 +4,7 @@ import styles from '../../scss/navbar.module.scss';
 import { FaAlignRight, FaOpencart } from 'react-icons/fa';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
-import logo from '../../images/logo.png';
+import logo from '../../images/logo.svg';
 
 const Navbar = () => {
   const [state, setState] = useState(false);
@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          <img src={logo} alt="Ventura logo" />
+          <img className={styles.logo} src={logo} alt="Ventura logo" />
           <button className={styles.logoBtn} onClick={() => setState(!state)}>
             <FaAlignRight className={styles.logoIcon} />
 
