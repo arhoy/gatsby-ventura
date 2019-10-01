@@ -39,7 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
   });
   // blog template w/ pagination
   const posts = data.posts.nodes;
-  const postsPerPage = 1;
+  const postsPerPage = 3;
   const numPages = Math.ceil(posts.length / postsPerPage);
 
   Array.from({ length: numPages }).forEach((_, i) => {

@@ -68,7 +68,7 @@ const BlogTemplate = ({ data: { post } }) => {
             {documentToReactComponents(json, options)}
           </article>
 
-          <AniLink fade to="/blog" className="btn-primary">
+          <AniLink fade to="/blogs" className="btn-primary">
             Return to Blog
           </AniLink>
         </div>

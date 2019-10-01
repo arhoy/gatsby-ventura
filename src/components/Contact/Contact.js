@@ -47,11 +47,16 @@ const Contact = () => {
               className={styles.submit}
             />
           </div>
+
+          {/* Redirect only available on GOLD PLAN */}
           <input
             type="hidden"
             name="_next"
             value="https://ventura-gatsby-site-101.netlify.com/thank-you"
           />
+
+        <input type="hidden" name="_subject" value="NEW CONTACT FORM SUBMISSION FROM VENTURA" />
+        {/* <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com" /> */}
         </form>
       </div>
     </section>

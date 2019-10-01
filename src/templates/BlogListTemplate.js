@@ -38,11 +38,11 @@ const BlogListTemplate = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title = "Blog List"/>
-      <section className={styles.center}>
+      <section>
         <Title title="latest" subtitle="posts" />
         <div className={styles.center}>
           {data.posts.nodes.map(post => (
-            <BlogCard key={post.id} blog={post} />
+            <BlogCard className = {styles.blogCard} key={post.id} blog={post} />
           ))}
         </div>
       </section>
