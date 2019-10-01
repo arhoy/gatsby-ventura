@@ -1,4 +1,4 @@
-## VENTURA TOURS
+## VENTURA TOURS 🦄
 
 - Ventura Tours is a demo Tour Booking Company that specializes in adventure seeking tours out in the rugged conditions.
 
@@ -12,3 +12,5 @@
 - Hosting: Netlify
 - Domain: https://ventura-gatsby-site-101.netlify.com/
 - Testing Domain: https://ventura-gatsby-site-101.netlify.com/
+- Hooks: Contentful triggered Hook
+- Contact Form: FormSpree

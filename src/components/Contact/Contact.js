@@ -47,7 +47,11 @@ const Contact = () => {
               className={styles.submit}
             />
           </div>
-          <input type="hidden" name="_next" value="/thank-you" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://ventura-gatsby-site-101.netlify.com/thank-you"
+          />
         </form>
       </div>
     </section>
