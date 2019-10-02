@@ -16,6 +16,7 @@ export const query = graphql`
     tour: contentfulTourExample(slug: { eq: $slug }) {
       id: contentful_id
       name
+      slug
       price
       country
       tourLength
@@ -41,6 +42,7 @@ const TourTemplate = ({ data }) => {
   const {
     id,
     name,
+    slug,
     images,
     description: { description },
     journey,
@@ -104,6 +106,7 @@ const TourTemplate = ({ data }) => {
             id={id}
             startDate={startDate}
             src={src}
+            slug = {slug}
           />
           <Link to="/tours" className="btn-primary">
             back to tours
