@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import styles from '../../scss/navbar.module.scss';
 import { FaAlignRight, FaOpencart } from 'react-icons/fa';
@@ -7,6 +7,9 @@ import socialIcons from '../constants/social-icons';
 import logo from '../../images/logo.svg';
 
 const Navbar = () => {
+  useEffect(() => {
+    console.log('Navbar is here!');
+  });
   const [state, setState] = useState(false);
   return (
     <nav className={styles.navbar}>
@@ -19,6 +22,8 @@ const Navbar = () => {
             <FaOpencart
               className={`snipcart-checkout ${styles.cartCheckout}`}
             />
+
+            <div data-netlify-identity-menu></div>
           </button>
         </div>
         <ul
