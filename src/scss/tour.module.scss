@@ -64,7 +64,7 @@
 }
 .country {
   text-transform: capitalize;
-  color: ($primaryColor);
+  color: $primaryColor;
   display: flex;
   align-items: center;
 }
@@ -72,7 +72,7 @@
   margin-right: 0.4rem;
 }
 .details {
-  color: ($darkGrey);
   text-transform: uppercase;
   text-align: right;
+  color: $darkGrey2;
 }

@@ -1,6 +1,7 @@
 @import './variables';
 .logo {
   max-width: 10rem;
+  margin-right: 1rem;
 }
 .nav-header {
   display: flex;
@@ -31,26 +32,30 @@
 
 .nav-links {
   list-style-type: none;
-  transition: $mainTransition;
   height: 0;
   overflow: hidden;
 }
 .show-nav {
-  height: 216px;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .nav-links a {
   display: block;
-  padding: 1rem 1.25rem;
+  padding: 1rem;
+  padding-right: 1rem;
   text-decoration: none;
   text-transform: capitalize;
   color: $mainBlack;
   transition: $mainTransition;
   font-weight: bold;
   letter-spacing: $mainSpacing;
+  &:hover {
+    color: $primaryColor;
+  }
 }
-.nav-links a:hover {
-  color: $primaryColor;
-}
+
 .nav-social-links {
   display: none;
 }
@@ -60,22 +65,13 @@
   font-size: 1.5rem;
 }
 
-.netlifyIdentity {
-  &:hover {
-    cursor: pointer;
-  }
-  & a {
-    color: $primaryColor;
-    cursor: pointer;
-  }
-}
-
 @media screen and (min-width: 576px) {
   .navbar {
     padding: 0 2rem;
   }
   .nav-links {
     margin-bottom: -0.2rem;
+    margin-left: 2rem;
   }
 }
 

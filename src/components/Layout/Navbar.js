@@ -12,28 +12,28 @@ const Navbar = () => {
     console.log('Navbar is here!');
     netlifyIdentity.init();
   }, []);
-  const [state, setState] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const burgerIconHandler = () => {
+    setIsOpen(prevOpen => !prevOpen);
+  };
   return (
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
           <img className={styles.logo} src={logo} alt="Ventura Logo" />
-          <button className={styles.logoBtn} onClick={() => setState(!state)}>
+          <button className={styles.logoBtn} onClick={burgerIconHandler}>
             <FaAlignRight className={styles.logoIcon} />
 
             <FaOpencart
               className={`snipcart-checkout ${styles.cartCheckout}`}
             />
-
-            <div
-              className={styles.netlifyIdentity}
-              data-netlify-identity-menu
-            ></div>
           </button>
         </div>
         <ul
           className={
-            state
+            isOpen
               ? `${styles.navLinks} ${styles.showNav}`
               : `${styles.navLinks}`
           }
@@ -45,6 +45,7 @@ const Navbar = () => {
               </AniLink>
             </li>
           ))}
+          <div className="netlify_custom__1" data-netlify-identity-button></div>
         </ul>
         <div className={styles.navSocialLinks}>
           <FaOpencart className={`snipcart-checkout ${styles.cartCheckout}`} />
