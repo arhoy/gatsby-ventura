@@ -5,11 +5,13 @@ import { FaAlignRight, FaOpencart } from 'react-icons/fa';
 import links from '../constants/links';
 import socialIcons from '../constants/social-icons';
 import logo from '../../images/logo.svg';
+import netlifyIdentity from 'netlify-identity-widget';
 
 const Navbar = () => {
   useEffect(() => {
     console.log('Navbar is here!');
-  });
+    netlifyIdentity.init();
+  }, []);
   const [state, setState] = useState(false);
   return (
     <nav className={styles.navbar}>
@@ -23,7 +25,10 @@ const Navbar = () => {
               className={`snipcart-checkout ${styles.cartCheckout}`}
             />
 
-            <div data-netlify-identity-menu></div>
+            <div
+              className={styles.netlifyIdentity}
+              data-netlify-identity-menu
+            ></div>
           </button>
         </div>
         <ul
@@ -36,8 +41,7 @@ const Navbar = () => {
           {links.map(link => (
             <li key={link.path}>
               <AniLink fade to={link.path}>
-                {' '}
-                {link.text}{' '}
+                {link.text}
               </AniLink>
             </li>
           ))}
